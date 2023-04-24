@@ -1,0 +1,168 @@
+:root {
+    /* Primary */
+    --Orange: hsl(25, 97%, 53%);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+/* font-family: 'Overpass', sans-serif; */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+}
+
+.rating-modal-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: hsl(210, 18%, 13%);
+    width: 350px;
+    height: 45vh;
+    border-radius: 1.5rem;
+    transition: .5s;
+}
+.rating-modal-con > .ico-box::after {
+    content: url('./../images/icon-star.svg');
+}
+.rating-modal-con > .ico-box {
+    flex-shrink: 0;
+}
+.ico-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--Dark-Blue);
+}
+
+.init-ico-box {
+    margin: 0 2rem;
+    margin-top: 1rem;
+}
+
+.rating-modal-con > h1 {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+    margin-bottom: -.5rem;
+}
+.rating-modal-con > p {
+    margin: 0 2rem;
+    color:hsla(0, 0%, 100%, .6);
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+.ico-box-con {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.ico-box-con > .ico-box {
+    color:hsla(0, 0%, 100%, .6);
+    transition: .5s;
+}
+.ico-box-con > .ico-box:hover {
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+}
+.submit-btn-box {
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+}
+.submit-btn-box > button {
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: .8rem;
+    color: var(--White);
+    background-color: var(--Orange);
+    font-weight: 500;
+    letter-spacing: .2rem;
+    transition: .5s;
+    cursor: pointer;
+}
+.submit-btn-box:hover > button {
+    background-color: var(--White);
+    color: var(--Orange);
+    
+}
+
+/* Thank you state */
+.thank-you-modal-con {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: hsl(210, 18%, 13%);
+    width: 350px;
+    height: 45vh;
+    border-radius: 1.5rem;
+    transition: all .5s;
+    visibility: hidden;
+}
+.modal-img {
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/illustration-thank-you.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+.rating-box {
+    width: 170px;
+    padding: .3rem .5rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: var(--Orange);
+    background-color: var(--Dark-Blue);
+    margin-top: -2rem;
+}
+.thank-you-modal-con > h1 {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+    margin-bottom: -.5rem;
+    margin-top: -1rem;
+}
+.thank-you-modal-con > p {
+    margin: 0 2rem;
+    color:hsla(0, 0%, 100%, .6);
+    font-size: .9rem;
+    line-height: 1.3rem;
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.visable {
+    visibility: visible;
+}
+
+
+@media (min-width: 1024px) {
+    .rating-modal-con {
+        width: 450px;
+        height: 50vh;
+    }
+    .ico-box-con > .ico-box {
+        width: 50px;
+        height: 50px;
+    }
+    .submit-btn-box > button {
+        padding: 1.4rem;
+    }
+    .thank-you-modal-con  {
+        width: 450px;
+        height: 50vh;
+    }
+} 
